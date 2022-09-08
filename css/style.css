@@ -91,3 +91,63 @@ body {
   font-style: italic;
   text-align: left;
 }
+.notes__add {
+  background-color: #009578;
+  border: none;
+  border-radius: 7px;
+  color: var(--secondaryColor);
+  cursor: pointer;
+  font-size: 1.25em;
+  font-weight: bold;
+  margin-bottom: 1em;
+  padding: 0.75em 0;
+  width: 100%;
+  transition: all 0.3s ease-in-out;
+}
+.notes__add:hover {
+  background-color: #00af8c;
+}
+
+/*  NOTE PREVIEW  SECTION */
+.notes__preview {
+  display: flex;
+  flex-direction: column;
+  padding: 2em 3em;
+  flex-grow: 1;
+}
+.notes__title,
+.notes__body {
+  border: none;
+  outline: none;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0.5rem 1rem;
+}
+.notes__title {
+  font-size: 3em;
+  font-weight: bold;
+}
+.notes__body {
+  flex-grow: 1;
+  font-size: 1.2em;
+  line-height: 1.5;
+  margin-top: 2em;
+  resize: none;
+}
+.notes__item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.notes__list-trash {
+  width: 35px;
+  height: 35px;
+  background: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--mainRed);
+}
