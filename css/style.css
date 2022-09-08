@@ -1,0 +1,56 @@
+@import url("../assets/styles/fonts.css");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "iranyekan";
+  list-style: none;
+}
+
+/*  VARIABLES : */
+:root {
+  --primaryColor: #6d28d9;
+  --secondaryColor: #ede9fe;
+  --mainWhite: #fff;
+  --mainBlack: #222;
+  --mainGrey: #7c7c7c;
+  --mainSpacing: 0.1rem;
+  --mainTransition: all 0.3s linear;
+  --mainRed: #db2777;
+  --bodyColor: #f6f6f6;
+  --nav-width: 250px;
+}
+body {
+  font-family: "iranyekan";
+  color: var(--mainBlack);
+  background-color: var(--bodyColor);
+  direction: rl;
+}
+.notes {
+  display: flex;
+}
+.notes__sidebar {
+  height: 100vh;
+  width: var(--nav-width);
+  background-color: #fff;
+  padding: 1.5rem 0.75rem 0.2rem;
+  position: sticky;
+  top: 0;
+  right: 0;
+  border-radius: 100px 0 0 0;
+  background: linear-gradient(180deg, #324467, #283142);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease-out;
+}
+.notes__logo {
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 2rem;
+  font-weight: 800;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  padding: 2rem 0;
+  text-align: center;
+}
