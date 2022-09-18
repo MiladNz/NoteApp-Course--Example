@@ -27,7 +27,7 @@ export default class NotesAPI {
     });
   }
   static saveNote(noteToSave) {
-    const notes = NotesAPI.getAllNotes(noteToSave);
+    const notes = NotesAPI.getAllNotes(); //noteToSave
     const existedNote = notes.find((n) => n.id == noteToSave.id);
     if (existedNote) {
       existedNote.title = noteToSave.title;

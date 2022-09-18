@@ -44,7 +44,7 @@ export default class NotesView {
     <i class="far fa-trash-alt"></i>
     </span>
     </div>
-    <div class="notes__samall-body">
+    <div class="notes__small-body">
     ${body.substring(0, MAX_BODY_LENGTH)}
     ${body.length > MAX_BODY_LENGTH ? "..." : ""}
     </div>
@@ -66,6 +66,7 @@ export default class NotesView {
       const { id, title, body, updated } = note;
       const html = this._createListItemHTML(id, title, body, updated);
       notesList += html;
+      //notesContainer.insertAdjacentHTML("beforeend", html);
     }
     notesContainer.innerHTML = notesList;
     notesContainer.querySelectorAll(".notes__list-item").forEach((noteItem) => {
