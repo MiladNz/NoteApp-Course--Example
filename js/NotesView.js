@@ -32,6 +32,9 @@ export default class NotesView {
         this.onNoteEdit(newTitle, newBody);
       });
     });
+
+    //hide note preview at first loading
+    this.updateNotePreviewVisibility(false);
   }
 
   //_ or # at the first used for private classes in ES6
@@ -75,5 +78,33 @@ export default class NotesView {
         this.onNoteSelect(noteItem.dataset.noteId)
       );
     });
+
+    notesContainer
+      .querySelectorAll(".notes__list-trash")
+      .forEach((noteItem) => {
+        noteItem.addEventListener("click", (e) => {
+          e.stopPropagation();
+          this.onNoteDelete(noteItem.dataset.noteId);
+        });
+      });
+  }
+
+  updateActiveNote(note) {
+    this.root.querySelector(".notes__title").value = note.title;
+    this.root.querySelector(".notes__body").value = note.body;
+
+    //  add selected class :
+    this.root.querySelectorAll(".notes__list-item").forEach((item) => {
+      item.classList.remove("notes__list-item--selected");
+    });
+
+    this.root
+      .querySelector(`.notes__list-item[data-note-id="${note.id}"]`)
+      .classList.add("notes__list-item--selected");
+  }
+  updateNotePreviewVisibility(visible) {
+    this.root.querySelector(".notes__preview").style.visibility = visible
+      ? "visible"
+      : "hidden";
   }
 }
