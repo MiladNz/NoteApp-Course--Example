@@ -23,7 +23,7 @@ export default class App {
   }
 
   _setActiveNote(note) {
-    this.activeNote = note = note;
+    this.activeNote = note;
     this.view.updateActiveNote(note);
   }
 
