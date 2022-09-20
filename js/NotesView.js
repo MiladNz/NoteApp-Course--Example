@@ -1,10 +1,11 @@
 export default class NotesView {
   constructor(root, handlers) {
     this.root = root; //app in main.js = root
-    const { onNoteAdd, onNoteEdit, onNoteSelect } = handlers;
+    const { onNoteAdd, onNoteEdit, onNoteSelect, onNoteDelete } = handlers;
     this.onNoteAdd = onNoteAdd;
     this.onNoteEdit = onNoteEdit;
-    this.onNoteSelect = onNoteSelect; //!
+    this.onNoteSelect = onNoteSelect;
+    this.onNoteDelete = onNoteDelete; //!
     this.root.innerHTML = `
     <div class="notes__sidebar">
     <div class="notes__logo">NOTE APP</div>
